@@ -114,3 +114,8 @@ bool Digraph::isAntisymmetric() const {
     }
     return true;
 }
+
+bool Digraph::isTransitive() const {
+    return (matrix.BooleanProduct(matrix) == matrix);
+}
+
