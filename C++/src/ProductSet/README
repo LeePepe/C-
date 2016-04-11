@@ -5,13 +5,13 @@
 
     4) Remember Cartesian product is a operation.
 
-### 2. Relation
+## 2. Relation
     1) Relation is subset of ProductSet.
     2) Of cource, Relation is a operation.
     3) Fortunately, We can use a boolean matrix to represent a relation.
     4) But generally we do not discusse normal relation.
 
-### 3. Digraph
+# 3. Digraph
     1) If A is a finite set and R is a relation on A.
     2) I use digraph to represent 1).
     2) That is, matrix will be a square matrix. And there are many properties or operations to program.
