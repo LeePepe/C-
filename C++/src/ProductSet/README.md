@@ -1,9 +1,9 @@
 ### 1. ProductSet
-    1) In mathematics, a Cartesian product is a mathematical operation which returns a set (or product set or simply product) from multiple sets. That is, for sets A and B, the Cartesian product A × B is the set of all ordered pairs (a, b) where a ∈ A and b ∈ B. Products can be specified using set-builder notation, e.g.
-    2) In my file, I define it as a class. That's wrong. But I didn't find a great way to show a simple set from two sets.
-    3) It just has two privte properties Set A and Set B.
+* In mathematics, a Cartesian product is a mathematical operation which returns a set (or product set or simply product) from multiple sets. That is, for sets A and B, the Cartesian product A × B is the set of all ordered pairs (a, b) where a ∈ A and b ∈ B. Products can be specified using set-builder notation, e.g.
+* In my file, I define it as a class. That's wrong. But I didn't find a great way to show a simple set from two sets.
+* It just has two privte properties Set A and Set B.
 
-    4) Remember Cartesian product is a operation.
+* Remember Cartesian product is a operation.
 
 ### 2. Relation
     1) Relation is subset of ProductSet.

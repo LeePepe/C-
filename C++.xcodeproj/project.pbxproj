@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10B1CB8DDF300B70667 /* Tree.cpp */; };
 		8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10E1CB8EB0100B70667 /* Relation.cpp */; };
+		8236F2771CBB54E9006B7BF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8236F2761CBB54E9006B7BF2 /* README.md */; };
 		829B3E791CB26857004320AC /* Inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E6C1CB26857004320AC /* Inheritance.cpp */; };
 		829B3E7A1CB26857004320AC /* Logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E6F1CB26857004320AC /* Logic.cpp */; };
 		829B3E7B1CB26857004320AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E711CB26857004320AC /* main.cpp */; };
@@ -32,11 +33,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		82169A5C1CBA9AEC00FECB51 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README; path = ProductSet/README; sourceTree = "<group>"; };
 		8220D10B1CB8DDF300B70667 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tree.cpp; path = Tree/Tree.cpp; sourceTree = "<group>"; };
 		8220D10C1CB8DDF300B70667 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Tree.hpp; path = Tree/Tree.hpp; sourceTree = "<group>"; };
 		8220D10E1CB8EB0100B70667 /* Relation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Relation.cpp; path = ProductSet/Relation.cpp; sourceTree = "<group>"; };
 		8220D10F1CB8EB0100B70667 /* Relation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Relation.hpp; path = ProductSet/Relation.hpp; sourceTree = "<group>"; };
+		8236F2761CBB54E9006B7BF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ProductSet/README.md; sourceTree = "<group>"; };
 		82390C5F1C7EC80800D3637E /* C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829B3E6A1CB26857004320AC /* header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
 		829B3E6C1CB26857004320AC /* Inheritance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inheritance.cpp; sourceTree = "<group>"; };
@@ -160,9 +161,9 @@
 				82CB43A81CB541C200977532 /* ProductSet.cpp */,
 				82CB43B41CB6692500977532 /* Digraph.cpp */,
 				82CB43B51CB6692500977532 /* Digraph.hpp */,
-				82169A5C1CBA9AEC00FECB51 /* README */,
 				8220D10E1CB8EB0100B70667 /* Relation.cpp */,
 				8220D10F1CB8EB0100B70667 /* Relation.hpp */,
+				8236F2761CBB54E9006B7BF2 /* README.md */,
 			);
 			name = ProductSet;
 			sourceTree = "<group>";
@@ -232,6 +233,7 @@
 				829B3E7C1CB26857004320AC /* Matrices.cpp in Sources */,
 				829B3E7B1CB26857004320AC /* main.cpp in Sources */,
 				829B3E7A1CB26857004320AC /* Logic.cpp in Sources */,
+				8236F2771CBB54E9006B7BF2 /* README.md in Sources */,
 				82CB43B31CB6492500977532 /* BooleanMatrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
