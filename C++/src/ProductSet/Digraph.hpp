@@ -32,6 +32,9 @@ public:
     bool isSymmetric() const;
     bool isAsymmetric() const;
     bool isAntisymmetric() const;
+    
+    bool isTransitive() const;
+    
 };
 
 #endif /* Digraph_hpp */
