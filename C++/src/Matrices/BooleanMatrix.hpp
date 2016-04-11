@@ -23,7 +23,7 @@ public:
     
     BooleanMatrix operator&(const BooleanMatrix &);
     BooleanMatrix operator|(const BooleanMatrix &);
-    BooleanMatrix BooleanProduct(const BooleanMatrix &);
+    BooleanMatrix BooleanProduct(const BooleanMatrix &) const;
     
 };
 

@@ -48,7 +48,7 @@ BooleanMatrix BooleanMatrix::operator|(const BooleanMatrix & bm) {
     return temp;
 }
 
-BooleanMatrix BooleanMatrix::BooleanProduct(const BooleanMatrix & bm) {
+BooleanMatrix BooleanMatrix::BooleanProduct(const BooleanMatrix & bm) const {
     assert(getColums() == bm.getRow());
     BooleanMatrix temp(getRow(), bm.getColums());
     for (int i = 1; i <= getRow(); i++) {
