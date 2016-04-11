@@ -3,23 +3,25 @@
 * In my file, I define it as a class. That's wrong. But I didn't find a great way to show a simple set from two sets.
 * It just has two privte properties Set A and Set B.
 
-* Remember Cartesian product is a operation.
+    Remember Cartesian product is a operation.
 
 ### 2. Relation
-    1) Relation is subset of ProductSet.
-    2) Of cource, Relation is a operation.
-    3) Fortunately, We can use a boolean matrix to represent a relation.
-    4) But generally we do not discusse normal relation.
+* Relation is subset of ProductSet.
+* Of cource, Relation is a operation.
+* Fortunately, We can use a boolean matrix to represent a relation.
+* But generally we do not discusse normal relation.
 
 ### 3. Digraph
-    1) If A is a finite set and R is a relation on A.
-    2) I use digraph to represent 1).
-    2) That is, matrix will be a square matrix. And there are many properties or operations to program.
-    3) Indegree adn Outdegree:
+    If A is a finite set and R is a relation on A.
+
+* I use digraph to represent 1).
+* That is, matrix will be a square matrix. And there are many properties or operations to program.
+
+    1. Indegree adn Outdegree:
         just count number from row or column way. then you can get in-degree and out-degree
-    4) Path of length:
+    2. Path of length:
         Input a N. And calculate path. We can use a new Relation(Digraph) to represent it.
-    5)Properties of Relations.
+    3. Properties of Relations.
         We can identify properties of a relation by its matrix as follows.
         (1) Reflexive:
             ∀ (a, a) ∈ R
