@@ -23,20 +23,20 @@
         Input a N. And calculate path. We can use a new Relation(Digraph) to represent it.
     3. Properties of Relations.
         We can identify properties of a relation by its matrix as follows.
-        (1) Reflexive:
+        1. Reflexive:
             ∀ (a, a) ∈ R
             The matrix of a reflexive relation must have all 1's on its main diagonal.
-        (2) Irreflexive:
+        2. Irreflexive:
             ∀ (a, a) ∉ R
             The matrix of a irreflexive relation must have all 0's on its main diagonal.
-        (3) Symmetric:
+        3. Symmetric:
             (a, b) ∈ R → (b, a) ∈ R
             The matrix of a symmetric relation when m[ij] = 1 and m[ji] = 1.
             Or MR = MᵀR.
-        (4) Asymmetric:
+        4. Asymmetric:
             (a, b) ∈ R → (b, a) ∉ R
             The matrix of an asymmetric relation when m[ij] = 1 and m[ji] = 0.
-        (5) Antisymmetric:
+        5. Antisymmetric:
             (a, b) ∈ R ∧ (b, a) ∈ R → a = b
             The matrix of an antisymmetric relation when i ≠ j and m[ij] = 0 or m[ji] = 0.
 
