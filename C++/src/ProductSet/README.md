@@ -5,7 +5,7 @@
 * It just has two privte properties Set A and Set B.
 
 
-    Remember Cartesian product is a operation.
+    Remember Cartesian product is a **operation**.
 
 ### 2. Relation
 
@@ -33,7 +33,7 @@
 
         Input a N. And calculate path. We can use a new Relation(Digraph) to represent it.
 
-        If N == -1, then return *conectivity relation* for R
+        If N == -1, then return **conectivity relation** for R
 
     3. Properties of Relations:
 
