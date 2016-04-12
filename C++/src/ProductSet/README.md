@@ -23,11 +23,17 @@
 
     1. Indegree adn Outdegree:
 
+        input a number which in set.
+
         just count number from row or column way. then you can get in-degree and out-degree.
+
+        if X not in set, then return -1.
 
     2. Path of length:
 
         Input a N. And calculate path. We can use a new Relation(Digraph) to represent it.
+
+        If N == -1, then return *conectivity relation* for R
 
     3. Properties of Relations:
 
