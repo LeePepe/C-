@@ -10,7 +10,7 @@
 #define BooleanMatrix_hpp
 
 #include <stdio.h>
-#include "Matrices.hpp"
+#include "Matrix.hpp"
 
 class BooleanMatrix: public Matrix {
 private:

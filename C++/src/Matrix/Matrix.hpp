@@ -1,13 +1,13 @@
 //
-//  Matrices.hpp
+//  Matrix.hpp
 //  C++
 //
 //  Created by 李天培 on 16/3/2.
 //  Copyright © 2016年 lee. All rights reserved.
 //
 
-#ifndef Matrices_hpp
-#define Matrices_hpp
+#ifndef Matrix_hpp
+#define Matrix_hpp
 
 #include <stdio.h>
 #include <iostream>
@@ -64,4 +64,4 @@ public:
     matrix_element_type getElement(int r, int c) const;
 };
 
-#endif /* Matrices_hpp */
+#endif /* Matrix_hpp */

@@ -10,13 +10,13 @@
 #define Relation_hpp
 
 #include <iostream>
-#include "../Matrices/BooleanMatrix.hpp"
+#include "../Matrix/BooleanMatrix.hpp"
 
 class Relation {
 protected:
     BooleanMatrix matrix;
 public:
-    Relation(BooleanMatrix &);
+    Relation(BooleanMatrix const &);
     
 };
 #endif /* Relation_hpp */

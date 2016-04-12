@@ -1,12 +1,12 @@
 //
-//  Matrices.cpp
+//  Matrix.cpp
 //  C++
 //
 //  Created by 李天培 on 16/3/2.
 //  Copyright © 2016年 lee. All rights reserved.
 //
 
-#include "Matrices.hpp"
+#include "Matrix.hpp"
 
 Matrix::Matrix(Matrix const & m) {
     row = m.row;

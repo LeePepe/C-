@@ -13,8 +13,8 @@
 #include "Inheritance/Inheritance.hpp"
 #include "Set/Set.hpp"
 #include "Logic/Logic.hpp"
-#include "Matrices/BooleanMatrix.hpp"
-#include "Matrices/Matrices.hpp"
+#include "Matrix/BooleanMatrix.hpp"
+#include "Matrix/Matrix.hpp"
 #include "ProductSet/ProductSet.hpp"
 #include "ProductSet/Digraph.hpp"
 

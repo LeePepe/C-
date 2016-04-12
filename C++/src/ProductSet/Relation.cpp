@@ -8,5 +8,5 @@
 
 #include "Relation.hpp"
 
-Relation::Relation(BooleanMatrix & m): matrix(m) {
+Relation::Relation(BooleanMatrix const & m): matrix(m) {
 }

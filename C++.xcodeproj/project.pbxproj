@@ -10,13 +10,13 @@
 		8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10B1CB8DDF300B70667 /* Tree.cpp */; };
 		8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10E1CB8EB0100B70667 /* Relation.cpp */; };
 		8236F2771CBB54E9006B7BF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8236F2761CBB54E9006B7BF2 /* README.md */; };
+		8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8236F27A1CBB9560006B7BF2 /* BooleanMatrix.cpp */; };
+		8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8236F27C1CBB9560006B7BF2 /* Matrix.cpp */; };
 		829B3E791CB26857004320AC /* Inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E6C1CB26857004320AC /* Inheritance.cpp */; };
 		829B3E7A1CB26857004320AC /* Logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E6F1CB26857004320AC /* Logic.cpp */; };
 		829B3E7B1CB26857004320AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E711CB26857004320AC /* main.cpp */; };
-		829B3E7C1CB26857004320AC /* Matrices.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E731CB26857004320AC /* Matrices.cpp */; };
 		829B3E7D1CB26857004320AC /* Set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E761CB26857004320AC /* Set.cpp */; };
 		82CB43AA1CB541C200977532 /* ProductSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82CB43A81CB541C200977532 /* ProductSet.cpp */; };
-		82CB43B31CB6492500977532 /* BooleanMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82CB43B11CB6492500977532 /* BooleanMatrix.cpp */; };
 		82CB43B61CB6692500977532 /* Digraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82CB43B41CB6692500977532 /* Digraph.cpp */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,10 @@
 		8220D10E1CB8EB0100B70667 /* Relation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Relation.cpp; path = ProductSet/Relation.cpp; sourceTree = "<group>"; };
 		8220D10F1CB8EB0100B70667 /* Relation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Relation.hpp; path = ProductSet/Relation.hpp; sourceTree = "<group>"; };
 		8236F2761CBB54E9006B7BF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ProductSet/README.md; sourceTree = "<group>"; };
+		8236F27A1CBB9560006B7BF2 /* BooleanMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooleanMatrix.cpp; sourceTree = "<group>"; };
+		8236F27B1CBB9560006B7BF2 /* BooleanMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BooleanMatrix.hpp; sourceTree = "<group>"; };
+		8236F27C1CBB9560006B7BF2 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
+		8236F27D1CBB9560006B7BF2 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
 		82390C5F1C7EC80800D3637E /* C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		829B3E6A1CB26857004320AC /* header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
 		829B3E6C1CB26857004320AC /* Inheritance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inheritance.cpp; sourceTree = "<group>"; };
@@ -45,14 +49,10 @@
 		829B3E6F1CB26857004320AC /* Logic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logic.cpp; sourceTree = "<group>"; };
 		829B3E701CB26857004320AC /* Logic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Logic.hpp; sourceTree = "<group>"; };
 		829B3E711CB26857004320AC /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		829B3E731CB26857004320AC /* Matrices.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrices.cpp; sourceTree = "<group>"; };
-		829B3E741CB26857004320AC /* Matrices.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrices.hpp; sourceTree = "<group>"; };
 		829B3E761CB26857004320AC /* Set.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Set.cpp; sourceTree = "<group>"; };
 		829B3E771CB26857004320AC /* Set.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Set.hpp; sourceTree = "<group>"; };
 		82CB43A81CB541C200977532 /* ProductSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProductSet.cpp; path = ProductSet/ProductSet.cpp; sourceTree = "<group>"; };
 		82CB43A91CB541C200977532 /* ProductSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ProductSet.hpp; path = ProductSet/ProductSet.hpp; sourceTree = "<group>"; };
-		82CB43B11CB6492500977532 /* BooleanMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BooleanMatrix.cpp; sourceTree = "<group>"; };
-		82CB43B21CB6492500977532 /* BooleanMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BooleanMatrix.hpp; sourceTree = "<group>"; };
 		82CB43B41CB6692500977532 /* Digraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Digraph.cpp; path = ProductSet/Digraph.cpp; sourceTree = "<group>"; };
 		82CB43B51CB6692500977532 /* Digraph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Digraph.hpp; path = ProductSet/Digraph.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +75,17 @@
 				8220D10C1CB8DDF300B70667 /* Tree.hpp */,
 			);
 			name = Tree;
+			sourceTree = "<group>";
+		};
+		8236F2791CBB9560006B7BF2 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				8236F27A1CBB9560006B7BF2 /* BooleanMatrix.cpp */,
+				8236F27B1CBB9560006B7BF2 /* BooleanMatrix.hpp */,
+				8236F27C1CBB9560006B7BF2 /* Matrix.cpp */,
+				8236F27D1CBB9560006B7BF2 /* Matrix.hpp */,
+			);
+			path = Matrix;
 			sourceTree = "<group>";
 		};
 		82390C561C7EC80800D3637E = {
@@ -110,7 +121,7 @@
 				829B3E6B1CB26857004320AC /* Inheritance */,
 				829B3E6E1CB26857004320AC /* Logic */,
 				829B3E711CB26857004320AC /* main.cpp */,
-				829B3E721CB26857004320AC /* Matrices */,
+				8236F2791CBB9560006B7BF2 /* Matrix */,
 				829B3E751CB26857004320AC /* Set */,
 			);
 			path = src;
@@ -132,17 +143,6 @@
 				829B3E701CB26857004320AC /* Logic.hpp */,
 			);
 			path = Logic;
-			sourceTree = "<group>";
-		};
-		829B3E721CB26857004320AC /* Matrices */ = {
-			isa = PBXGroup;
-			children = (
-				82CB43B21CB6492500977532 /* BooleanMatrix.hpp */,
-				82CB43B11CB6492500977532 /* BooleanMatrix.cpp */,
-				829B3E741CB26857004320AC /* Matrices.hpp */,
-				829B3E731CB26857004320AC /* Matrices.cpp */,
-			);
-			path = Matrices;
 			sourceTree = "<group>";
 		};
 		829B3E751CB26857004320AC /* Set */ = {
@@ -226,15 +226,15 @@
 			files = (
 				8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */,
 				8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */,
+				8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */,
 				829B3E7D1CB26857004320AC /* Set.cpp in Sources */,
+				8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */,
 				82CB43B61CB6692500977532 /* Digraph.cpp in Sources */,
 				829B3E791CB26857004320AC /* Inheritance.cpp in Sources */,
 				82CB43AA1CB541C200977532 /* ProductSet.cpp in Sources */,
-				829B3E7C1CB26857004320AC /* Matrices.cpp in Sources */,
 				829B3E7B1CB26857004320AC /* main.cpp in Sources */,
 				829B3E7A1CB26857004320AC /* Logic.cpp in Sources */,
 				8236F2771CBB54E9006B7BF2 /* README.md in Sources */,
-				82CB43B31CB6492500977532 /* BooleanMatrix.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

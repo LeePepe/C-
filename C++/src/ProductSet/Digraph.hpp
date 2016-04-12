@@ -10,7 +10,7 @@
 #define Digraph_hpp
 
 #include <stdio.h>
-#include "../Matrices/BooleanMatrix.hpp"
+#include "../Matrix/BooleanMatrix.hpp"
 #include "../Set/Set.hpp"
 #include "ProductSet.hpp"
 #include "Relation.hpp"
@@ -20,7 +20,7 @@ private:
     Set set;
     int getSetElePos(int);
 public:
-    Digraph(BooleanMatrix &m, Set &s);
+    Digraph(BooleanMatrix const &m, Set const &s);
     int inDegree(int);
     int outDegree(int);
     
@@ -35,6 +35,7 @@ public:
     
     bool isTransitive() const;
     
+    BooleanMatrix getBooleanMatrix() const;
 };
 
 #endif /* Digraph_hpp */

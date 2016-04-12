@@ -8,22 +8,14 @@
 
 #include "Digraph.hpp"
 
-Digraph::Digraph(BooleanMatrix &m, Set &s) : Relation(m) , set(s) {
+Digraph::Digraph(BooleanMatrix const &m, Set const &s) : Relation(m) , set(s) {
+}
+
+BooleanMatrix Digraph::getBooleanMatrix() const {
+    return matrix;
 }
 
 int Digraph::inDegree(int x) {
-    if (set.isInSet(x)) {
-        int pos = getSetElePos(x);
-        int sum = 0;
-        for (int i = 1; i <= matrix.getColums(); i++) {
-            sum += matrix.getElement(pos, i);
-        }
-        return sum;
-    }
-    return -1;
-}
-
-int Digraph::outDegree(int x) {
     if (set.isInSet(x)) {
         int pos = getSetElePos(x);
         int sum = 0;
@@ -35,9 +27,21 @@ int Digraph::outDegree(int x) {
     return -1;
 }
 
+int Digraph::outDegree(int x) {
+    if (set.isInSet(x)) {
+        int pos = getSetElePos(x);
+        int sum = 0;
+        for (int i = 1; i <= matrix.getColums(); i++) {
+            sum += matrix.getElement(pos, i);
+        }
+        return sum;
+    }
+    return -1;
+}
+
 int Digraph::getSetElePos(int x) {
-    for (int i = 1; i < set.getSize(); i++) {
-        if (set.get(i - 1) == x) return i;
+    for (int i = 1; i <= set.getSize(); i++) {
+        if (set.get(i) == x) return i;
     }
     return -1;
 }
@@ -107,7 +111,7 @@ bool Digraph::isAntisymmetric() const {
         for (int j = 1; j <= matrix.getColums(); j++) {
             if (i != j &&
                 matrix.getElement(i, j) == 1 &&
-                matrix.getElement(i, j) == 1) {
+                matrix.getElement(j, i) == 1) {
                 return false;
             }
         }
