@@ -16,12 +16,6 @@ struct Node {
     std::list<Node> list;
 } TreeNode;
 
-class Tree {
-    <#instance variables#>
-    
-public:
-    <#member functions#>
-};
 
 
 
