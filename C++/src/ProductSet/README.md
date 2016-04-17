@@ -15,12 +15,35 @@
 * But generally we do not discusse normal relation.
 
 #### Operations on relation
+-1 is inverse and ~ is complement.
 
-1. Suppose that R and S are relations from A to B.
+* Suppose that R and S are relations from A to B.
     1. If R ⊆ S, then R-1 ⊆ S-1.
     2. If R ⊆ S, then ~R ⊆ ~S.
-    3. (R ∩ S)-1 = R-1 ∩ S-1 and (R ∪ S)-1 = R-1 ∪ S-1
-    4. 
+    3. (R ∩ S)-1 = R-1 ∩ S-1 and (R ∪ S)-1 = R-1 ∪ S-1.
+    4. ~(R ∩ S) = ~R ∩ ~S and ~(R ∪ S) = ~R ∪ ~S.
+* Let R and S be relations on a set A.
+    1. If R is reflexive, so is R-1.
+    2. If R and S are reflxive, then so are R ∩ S and R ∪ S.
+    3. R is reflexive if and only if ~R is irreflexive.
+* Let R be a relation on a set A. Then
+    1. R is symmetric if and only if R = R-1.
+    2. R is antisymmetric if and only if R ∩ R-1 ⊆ △.
+    3. R is asymmetric if and only if R ∩ R-1 = ∅.
+* Let R and S be relations on A.
+    1. If R is symmetric, so are R-1 and ~R.
+    2. If R adn S are symmetric, so are R ∩ S and R ∪ S.
+* Let R and S be relations on A.
+    1. (R ∩ S)2 ⊆ R2 ∩ S2.
+    2. If R and S are transitive, so is R ∩ S.
+    3. If R and S are equivalence relations, so is R ∩ S.
+
+#### Closures
+
+#### Composition
+
+It is complex to program on general relation. So I do that in BinaryRelation.
+
 
 ### 3. BinaryRelation
 
@@ -87,4 +110,8 @@
     4. Equivalence Relations
         
         A relation R on a set A is called an **equivalence relation** if it is reflexive, symmetric and transitive.
+
+    5. Composition
+        
+        M(S∘R) = M(R) ⊙ M(S)
 
