@@ -50,14 +50,14 @@ Digraph Digraph::pathOfLength(int n) {
     BooleanMatrix tempBM = matrix;
     if (n == -1) {
         while (true) {
-            if (tempBM == tempBM.BooleanProduct(tempBM)) {
+            if (tempBM == tempBM.BooleanProduct(matrix)) {
                 break;
             }
-            tempBM = tempBM.BooleanProduct(tempBM);
+            tempBM = tempBM.BooleanProduct(matrix);
         }
     } else {
         for (int i = 1; i < n; i++) {
-            tempBM = tempBM.BooleanProduct(tempBM);
+            tempBM = tempBM.BooleanProduct(matrix);
         }
     }
     Digraph temp(tempBM, set);
@@ -120,6 +120,18 @@ bool Digraph::isAntisymmetric() const {
 }
 
 bool Digraph::isTransitive() const {
-    return (matrix.BooleanProduct(matrix) == matrix);
+    for (int i = 1; i <= matrix.getRow(); i++) {
+        for (int j = 1; j <= matrix.getColums(); j++) {
+            for (int k = 1; k <= matrix.getRow(); k++) {
+                if (matrix.getElement(i, k) == 1 &&
+                    matrix.getElement(k, j) == 1 &&
+                    matrix.getElement(i, j) == 0) {
+                    return false;
+                }
+            }
+        }
+    }
+    
+    return true;
 }
 
