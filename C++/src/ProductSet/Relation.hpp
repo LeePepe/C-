@@ -18,5 +18,12 @@ protected:
 public:
     Relation(BooleanMatrix const &);
     
+    // Operations on Relations
+    Relation complementary() const;
+    Relation inverse() const;
+    Relation operator&(const Relation &);
+    Relation operator|(const Relation &);
+    
+    
 };
 #endif /* Relation_hpp */
