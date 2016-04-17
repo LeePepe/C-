@@ -18,7 +18,7 @@
 
     If A is a finite set and R is a relation on A.
 
-* I use digraph to represent first rule.
+* I use digraph to represent binary relation.
 * That is, matrix will be a square matrix. And there are many properties or operations to program.
 
     1. Indegree adn Outdegree:
@@ -74,9 +74,6 @@
 
             (a, b) ∈ R ∧ (b, c) ∈ R → (a, c) ∈ R
 
-            MR ⊙ MR = MR.
+            The matrix of an transitive relation when m[ik] = 1 and m[kj] = 1 and m[ij] = 1.
 
     4. Equivalence Relations
-
-
-
