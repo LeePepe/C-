@@ -14,11 +14,19 @@
 * Fortunately, We can use a boolean matrix to represent a relation.
 * But generally we do not discusse normal relation.
 
-### 3. Digraph
+#### Operations on relation
+
+1. Suppose that R and S are relations from A to B.
+    1. If R ⊆ S, then R-1 ⊆ S-1.
+    2. If R ⊆ S, then ~R ⊆ ~S.
+    3. (R ∩ S)-1 = R-1 ∩ S-1 and (R ∪ S)-1 = R-1 ∪ S-1
+    4. 
+
+### 3. BinaryRelation
 
     If A is a finite set and R is a relation on A.
 
-* I use digraph to represent binary relation.
+* I use BinaryRelation to represent binary relation.
 * That is, matrix will be a square matrix. And there are many properties or operations to program.
 
     1. Indegree adn Outdegree:
@@ -31,7 +39,7 @@
 
     2. Path of length:
 
-        Input a N. And calculate path. We can use a new Relation(Digraph) to represent it.
+        Input a N. And calculate path. We can use a new Relation(BinaryRelation) to represent it.
 
         If N == -1, then return **conectivity relation** for R
 
@@ -77,3 +85,6 @@
             The matrix of an transitive relation when m[ik] = 1 and m[kj] = 1 and m[ij] = 1.
 
     4. Equivalence Relations
+        
+        A relation R on a set A is called an **equivalence relation** if it is reflexive, symmetric and transitive.
+
