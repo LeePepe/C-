@@ -11,10 +11,10 @@
 Matrix::Matrix(Matrix const & m) {
     row = m.row;
     columns = m.columns;
-    matirx = new matrix_element_type[row * columns];
+    matrix = new matrix_element_type[row * columns];
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            matirx[ELEMENT_POS(i, j)] = m.matirx[ELEMENT_POS(i, j)];
+            matrix[ELEMENT_POS(i, j)] = m.matrix[ELEMENT_POS(i, j)];
         }
     }
 }
@@ -22,34 +22,34 @@ Matrix::Matrix(Matrix const & m) {
 Matrix::Matrix(int r, int c) {
     row = r > 0 ? r : 1;
     columns = c > 0 ? c : 1;
-    matirx = new matrix_element_type[row * columns];
+    matrix = new matrix_element_type[row * columns];
     for (int i = 0; i < row * columns; i++) {
-        matirx[i] = 0;
+        matrix[i] = 0;
     }
 }
 
 Matrix::~Matrix() {
-    delete [] matirx;
+    delete [] matrix;
 }
 
 Matrix Matrix::identifyMatrix(int n) {
     Matrix temp = Matrix(n, n);
     for (int i = 1; i <= temp.columns * temp.row; i++) {
-        temp.matirx[(i - 1) * n + i - 1] = 1;
+        temp.matrix[(i - 1) * n + i - 1] = 1;
     }
     return temp;
 }
 
 bool Matrix::replace(Matrix::matrix_element_type e, int r, int c) {
     if (r <= row && c <= columns && r > 0 && columns > 0) {
-        matirx[ELEMENT_POS(r, c)] = e;
+        matrix[ELEMENT_POS(r, c)] = e;
         return true;
     }
     return false;
 }
 
 Matrix::matrix_element_type Matrix::getElement(int r, int c) const {
-    return matirx[ELEMENT_POS(r, c)];
+    return matrix[ELEMENT_POS(r, c)];
 }
 
 int Matrix::getRow() const {
@@ -66,7 +66,7 @@ bool Matrix::isDiagonalMatrix() const {
     }
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            if (i != j && matirx[ELEMENT_POS(i, j)] != 0) {
+            if (i != j && matrix[ELEMENT_POS(i, j)] != 0) {
                 return false;
             }
         }
@@ -81,7 +81,7 @@ bool Matrix::isSquareMatrix() const {
 bool Matrix::isZeroMatrix() const {
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            if (matirx[ELEMENT_POS(i, j)] != 0) {
+            if (matrix[ELEMENT_POS(i, j)] != 0) {
                 return false;
             }
         }
@@ -96,12 +96,12 @@ bool Matrix::isSymmetrix() const {
 Matrix& Matrix::operator=(const Matrix &m) {
     row = m.row;
     columns = m.columns;
-    delete [] matirx;
-    matirx = new matrix_element_type[row * columns];
+    delete [] matrix;
+    matrix = new matrix_element_type[row * columns];
 
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            matirx[ELEMENT_POS(i, j)] = m.matirx[ELEMENT_POS(i, j)];
+            matrix[ELEMENT_POS(i, j)] = m.matrix[ELEMENT_POS(i, j)];
         }
     } 
     return *this;
@@ -113,7 +113,7 @@ Matrix Matrix::operator+(const Matrix &m) {
     Matrix temp(*this);
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            temp.matirx[ELEMENT_POS(i, j)] += m.matirx[ELEMENT_POS(i, j)];
+            temp.matrix[ELEMENT_POS(i, j)] += m.matrix[ELEMENT_POS(i, j)];
         }
     }
     return temp;
@@ -125,7 +125,7 @@ Matrix Matrix::operator*(const Matrix &m) {
     for (int i = 1; i <= temp.row; i++) {
         for (int j = 1; j <= temp.columns; j++) {
             for (int s = 1; s <= columns; s++) {
-                temp.matirx[(i - 1) * temp.columns + j - 1] += matirx[ELEMENT_POS(i, s)] * m.matirx[(s - 1) * m.columns + j - 1];
+                temp.matrix[(i - 1) * temp.columns + j - 1] += matrix[ELEMENT_POS(i, s)] * m.matrix[(s - 1) * m.columns + j - 1];
             }
         }
     }
@@ -138,7 +138,7 @@ bool Matrix::operator==(const Matrix &m) const {
     }
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            if (matirx[ELEMENT_POS(i, j)] != m.matirx[ELEMENT_POS(i, j)]) {
+            if (matrix[ELEMENT_POS(i, j)] != m.matrix[ELEMENT_POS(i, j)]) {
                 return false;
             }
         }
@@ -150,7 +150,7 @@ Matrix Matrix::transpose() const {
     Matrix t(columns, row);
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-             t.matirx[(j - 1) * t.columns + i - 1] = matirx[ELEMENT_POS(i, j)];
+             t.matrix[(j - 1) * t.columns + i - 1] = matrix[ELEMENT_POS(i, j)];
         }
     }
     return t;

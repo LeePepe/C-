@@ -10,7 +10,7 @@
 
 bool BooleanMatrix::replace(matrix_element_type e, int r, int c) {
     if (r <= row && c <= columns && r > 0 && columns > 0) {
-        matirx[ELEMENT_POS(r, c)] = e;
+        matrix[ELEMENT_POS(r, c)] = e;
         return true;
     }
     return false;
@@ -28,8 +28,8 @@ BooleanMatrix BooleanMatrix::operator&(const BooleanMatrix & bm) {
     BooleanMatrix temp(row, columns);
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            temp.matirx[ELEMENT_POS(i, j)] =
-            matirx[ELEMENT_POS(i, j)] & bm.matirx[ELEMENT_POS(i, j)];
+            temp.matrix[ELEMENT_POS(i, j)] =
+            matrix[ELEMENT_POS(i, j)] & bm.matrix[ELEMENT_POS(i, j)];
         }
     }
     return temp;
@@ -41,8 +41,8 @@ BooleanMatrix BooleanMatrix::operator|(const BooleanMatrix & bm) {
     BooleanMatrix temp(row, columns);
     for (int i = 1; i <= row; i++) {
         for (int j = 1; j <= columns; j++) {
-            temp.matirx[ELEMENT_POS(i, j)] =
-            matirx[ELEMENT_POS(i, j)] | bm.matirx[ELEMENT_POS(i, j)];
+            temp.matrix[ELEMENT_POS(i, j)] =
+            matrix[ELEMENT_POS(i, j)] | bm.matrix[ELEMENT_POS(i, j)];
         }
     }
     return temp;
@@ -54,7 +54,7 @@ BooleanMatrix BooleanMatrix::BooleanProduct(const BooleanMatrix & bm) const {
     for (int i = 1; i <= getRow(); i++) {
         for (int j = 1; j <= bm.getColums(); j++) {
             for (int k = 1; k <= getColums(); k++) {
-                temp.matirx[(i - 1) * temp.columns + j - 1] |=
+                temp.matrix[(i - 1) * temp.columns + j - 1] |=
                 getElement(i, k) & bm.getElement(k, j);
             }
         }

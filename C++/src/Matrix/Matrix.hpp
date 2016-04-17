@@ -21,7 +21,7 @@ private:
     typedef int matrix_element_type;
 protected:
     int row, columns;
-    matrix_element_type* matirx;
+    matrix_element_type* matrix;
     
 public:
     // copy constructor
@@ -44,7 +44,7 @@ public:
     void display() const {
         for (int i = 1; i <= row; i++) {
             for (int j = 1; j <= columns; j++) {
-                std::cout << matirx[ELEMENT_POS(i, j)] << " ";
+                std::cout << matrix[ELEMENT_POS(i, j)] << " ";
             }
             std::cout << std::endl;
         }
