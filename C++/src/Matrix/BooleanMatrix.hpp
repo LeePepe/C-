@@ -25,6 +25,7 @@ public:
     BooleanMatrix operator|(const BooleanMatrix &);
     BooleanMatrix BooleanProduct(const BooleanMatrix &) const;
     
+    BooleanMatrix transpose() const;
 };
 
 #endif /* BooleanMatrix_hpp */

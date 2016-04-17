@@ -62,3 +62,13 @@ BooleanMatrix BooleanMatrix::BooleanProduct(const BooleanMatrix & bm) const {
     return temp;
 }
 
+BooleanMatrix BooleanMatrix::transpose() const {
+    BooleanMatrix t(columns, row);
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= columns; j++) {
+            t.matrix[(j - 1) * t.columns + i - 1] = matrix[ELEMENT_POS(i, j)];
+        }
+    }
+    return t;
+}
+
