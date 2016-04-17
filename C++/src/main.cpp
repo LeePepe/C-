@@ -86,7 +86,7 @@ void testBooleanMatrix() {
 }
 
 void testDigraph() {
-    cout << "TEST DIGRAPH" << endl;
+    cout << "TEST BinaryRelation" << endl;
     unsigned int r = 1;
     cin >> r;
     
@@ -118,7 +118,7 @@ void testDigraph() {
     displaySet(set.getMembers(), set.getSize());
     cout << endl;
     
-    Digraph d(matrix, set);
+    BinaryRelation d(matrix, set);
     
     int x;
     cin >> x;
@@ -128,7 +128,7 @@ void testDigraph() {
     cout << test[x] << "'s out degree: " << d.outDegree(test[x]) << endl;
     
     cin >> x;
-    Digraph pathD = d.pathOfLength(x);
+    BinaryRelation pathD = d.pathOfLength(x);
     pathD.getBooleanMatrix().display();
     cout << endl;
     

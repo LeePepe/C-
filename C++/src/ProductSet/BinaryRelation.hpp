@@ -1,5 +1,5 @@
 //
-//  Digraph.hpp
+//  BinaryRelation.hpp
 //  C++
 //
 //  Created by 李天培 on 16/4/7.
@@ -15,26 +15,29 @@
 #include "ProductSet.hpp"
 #include "Relation.hpp"
 
-class Digraph: Relation {
+class BinaryRelation: public Relation {
 private:
     Set set;
     int getSetElePos(int);
 public:
-    Digraph(BooleanMatrix const &m, Set const &s);
+    BinaryRelation(BooleanMatrix const &m, Set const &s);
     int inDegree(int);
     int outDegree(int);
-    
-    Digraph pathOfLength(int);
-    
+
+    BinaryRelation pathOfLength(int);
+
     // Properties of Relations.    
     bool isReflexive() const;
     bool isIrreflexive() const;
     bool isSymmetric() const;
     bool isAsymmetric() const;
     bool isAntisymmetric() const;
-    
     bool isTransitive() const;
+
+    bool isEquivalence() const;
     
+    BinaryRelation composition(const BinaryRelation &);
+
     BooleanMatrix getBooleanMatrix() const;
 };
 

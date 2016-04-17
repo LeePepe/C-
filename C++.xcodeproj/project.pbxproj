@@ -17,7 +17,7 @@
 		829B3E7B1CB26857004320AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E711CB26857004320AC /* main.cpp */; };
 		829B3E7D1CB26857004320AC /* Set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E761CB26857004320AC /* Set.cpp */; };
 		82CB43AA1CB541C200977532 /* ProductSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82CB43A81CB541C200977532 /* ProductSet.cpp */; };
-		82CB43B61CB6692500977532 /* Digraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82CB43B41CB6692500977532 /* Digraph.cpp */; };
+		82CB43B61CB6692500977532 /* BinaryRelation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82CB43B41CB6692500977532 /* BinaryRelation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,8 +53,8 @@
 		829B3E771CB26857004320AC /* Set.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Set.hpp; sourceTree = "<group>"; };
 		82CB43A81CB541C200977532 /* ProductSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ProductSet.cpp; path = ProductSet/ProductSet.cpp; sourceTree = "<group>"; };
 		82CB43A91CB541C200977532 /* ProductSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ProductSet.hpp; path = ProductSet/ProductSet.hpp; sourceTree = "<group>"; };
-		82CB43B41CB6692500977532 /* Digraph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Digraph.cpp; path = ProductSet/Digraph.cpp; sourceTree = "<group>"; };
-		82CB43B51CB6692500977532 /* Digraph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Digraph.hpp; path = ProductSet/Digraph.hpp; sourceTree = "<group>"; };
+		82CB43B41CB6692500977532 /* BinaryRelation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = BinaryRelation.cpp; path = ProductSet/BinaryRelation.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		82CB43B51CB6692500977532 /* BinaryRelation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; lineEnding = 0; name = BinaryRelation.hpp; path = ProductSet/BinaryRelation.hpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +159,8 @@
 			children = (
 				82CB43A91CB541C200977532 /* ProductSet.hpp */,
 				82CB43A81CB541C200977532 /* ProductSet.cpp */,
-				82CB43B41CB6692500977532 /* Digraph.cpp */,
-				82CB43B51CB6692500977532 /* Digraph.hpp */,
+				82CB43B41CB6692500977532 /* BinaryRelation.cpp */,
+				82CB43B51CB6692500977532 /* BinaryRelation.hpp */,
 				8220D10E1CB8EB0100B70667 /* Relation.cpp */,
 				8220D10F1CB8EB0100B70667 /* Relation.hpp */,
 				8236F2761CBB54E9006B7BF2 /* README.md */,
@@ -229,7 +229,7 @@
 				8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */,
 				829B3E7D1CB26857004320AC /* Set.cpp in Sources */,
 				8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */,
-				82CB43B61CB6692500977532 /* Digraph.cpp in Sources */,
+				82CB43B61CB6692500977532 /* BinaryRelation.cpp in Sources */,
 				829B3E791CB26857004320AC /* Inheritance.cpp in Sources */,
 				82CB43AA1CB541C200977532 /* ProductSet.cpp in Sources */,
 				829B3E7B1CB26857004320AC /* main.cpp in Sources */,

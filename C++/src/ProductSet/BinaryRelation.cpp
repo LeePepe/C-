@@ -1,21 +1,21 @@
 //
-//  Digraph.cpp
+//  BinaryRelation.cpp
 //  C++
 //
 //  Created by 李天培 on 16/4/7.
 //  Copyright © 2016年 lee. All rights reserved.
 //
 
-#include "Digraph.hpp"
+#include "BinaryRelation.hpp"
 
-Digraph::Digraph(BooleanMatrix const &m, Set const &s) : Relation(m) , set(s) {
+BinaryRelation::BinaryRelation(BooleanMatrix const &m, Set const &s) : Relation(m) , set(s) {
 }
 
-BooleanMatrix Digraph::getBooleanMatrix() const {
+BooleanMatrix BinaryRelation::getBooleanMatrix() const {
     return matrix;
 }
 
-int Digraph::inDegree(int x) {
+int BinaryRelation::inDegree(int x) {
     if (set.isInSet(x)) {
         int pos = getSetElePos(x);
         int sum = 0;
@@ -27,7 +27,7 @@ int Digraph::inDegree(int x) {
     return -1;
 }
 
-int Digraph::outDegree(int x) {
+int BinaryRelation::outDegree(int x) {
     if (set.isInSet(x)) {
         int pos = getSetElePos(x);
         int sum = 0;
@@ -39,14 +39,14 @@ int Digraph::outDegree(int x) {
     return -1;
 }
 
-int Digraph::getSetElePos(int x) {
+int BinaryRelation::getSetElePos(int x) {
     for (int i = 1; i <= set.getSize(); i++) {
         if (set.get(i) == x) return i;
     }
     return -1;
 }
 
-Digraph Digraph::pathOfLength(int n) {
+BinaryRelation BinaryRelation::pathOfLength(int n) {
     BooleanMatrix tempBM = matrix;
     if (n == -1) {
         while (true) {
@@ -60,11 +60,11 @@ Digraph Digraph::pathOfLength(int n) {
             tempBM = tempBM.BooleanProduct(matrix);
         }
     }
-    Digraph temp(tempBM, set);
+    BinaryRelation temp(tempBM, set);
     return temp;
 }
 
-bool Digraph::isReflexive() const {
+bool BinaryRelation::isReflexive() const {
     for (int i = 1; i <= matrix.getRow(); i++) {
         if (matrix.getElement(i, i) == 0) {
             return false;
@@ -73,7 +73,7 @@ bool Digraph::isReflexive() const {
     return true;
 }
 
-bool Digraph::isIrreflexive() const {
+bool BinaryRelation::isIrreflexive() const {
     for (int i = 1; i <= matrix.getRow(); i++) {
         if (matrix.getElement(i, i) == 1) {
             return false;
@@ -82,7 +82,7 @@ bool Digraph::isIrreflexive() const {
     return true;
 }
 
-bool Digraph::isSymmetric() const {
+bool BinaryRelation::isSymmetric() const {
     for (int i = 1; i <= matrix.getRow(); i++) {
         for (int j = 1; j <= matrix.getColums(); j++) {
             if (matrix.getElement(i, j) == 1 &&
@@ -94,7 +94,7 @@ bool Digraph::isSymmetric() const {
     return true;
 }
 
-bool Digraph::isAsymmetric() const {
+bool BinaryRelation::isAsymmetric() const {
     for (int i = 1; i <= matrix.getRow(); i++) {
         for (int j = 1; j <= matrix.getColums(); j++) {
             if (matrix.getElement(i, j) == 1 &&
@@ -106,7 +106,7 @@ bool Digraph::isAsymmetric() const {
     return true;
 }
 
-bool Digraph::isAntisymmetric() const {
+bool BinaryRelation::isAntisymmetric() const {
     for (int i = 1; i <= matrix.getRow(); i++) {
         for (int j = 1; j <= matrix.getColums(); j++) {
             if (i != j &&
@@ -119,7 +119,7 @@ bool Digraph::isAntisymmetric() const {
     return true;
 }
 
-bool Digraph::isTransitive() const {
+bool BinaryRelation::isTransitive() const {
     for (int i = 1; i <= matrix.getRow(); i++) {
         for (int j = 1; j <= matrix.getColums(); j++) {
             for (int k = 1; k <= matrix.getRow(); k++) {
@@ -131,7 +131,17 @@ bool Digraph::isTransitive() const {
             }
         }
     }
-    
     return true;
 }
 
+bool BinaryRelation::isEquivalence() const {
+    return ((*this).isReflexive() &&
+            (*this).isSymmetric() &&
+            (*this).isTransitive());
+}
+
+BinaryRelation BinaryRelation::composition(const BinaryRelation & br) {
+    BooleanMatrix m = matrix.BooleanProduct(br.getBooleanMatrix());
+    BinaryRelation temp(m, set);
+    return temp;
+}

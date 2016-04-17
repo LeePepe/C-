@@ -16,7 +16,7 @@
 #include "Matrix/BooleanMatrix.hpp"
 #include "Matrix/Matrix.hpp"
 #include "ProductSet/ProductSet.hpp"
-#include "ProductSet/Digraph.hpp"
+#include "ProductSet/BinaryRelation.hpp"
 
 #define MAX 100
 #define MIN -100
