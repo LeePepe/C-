@@ -11,9 +11,6 @@
 BinaryRelation::BinaryRelation(BooleanMatrix const &m, Set const &s) : Relation(m) , set(s) {
 }
 
-BooleanMatrix BinaryRelation::getBooleanMatrix() const {
-    return matrix;
-}
 
 int BinaryRelation::inDegree(int x) {
     if (set.isInSet(x)) {

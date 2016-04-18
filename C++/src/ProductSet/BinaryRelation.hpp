@@ -38,7 +38,6 @@ public:
     
     BinaryRelation composition(const BinaryRelation &);
 
-    BooleanMatrix getBooleanMatrix() const;
 };
 
 #endif /* Digraph_hpp */

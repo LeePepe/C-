@@ -18,6 +18,8 @@ protected:
 public:
     Relation(BooleanMatrix const &);
     
+    BooleanMatrix getBooleanMatrix() const;
+    
     // Operations on Relations
     Relation complementary() const;
     Relation inverse() const;

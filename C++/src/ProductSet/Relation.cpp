@@ -11,6 +11,11 @@
 Relation::Relation(BooleanMatrix const & m): matrix(m) {
 }
 
+BooleanMatrix Relation::getBooleanMatrix() const {
+    return matrix;
+}
+
+
 Relation Relation::complementary() const {
     Relation temp(matrix);
     for (int i = 1; i <= matrix.getRow(); i++) {
