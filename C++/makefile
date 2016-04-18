@@ -1,5 +1,11 @@
 # The executable file name.
-PROGRAM = C++
+PROGRAM = ./C++
+
+# The creating test data executable file name.
+TEST = ./test_data
+
+# The random test data file name.
+TESTFILE = text.txt
 
 # The pre-processor and compiler.
 CXX = g++
@@ -12,14 +18,25 @@ COMPILE = $(CXX) $(CXXFLAGS) -c
 LINK = $(CXX) $(CXXFLAGS)
 
 CPPDIR = $(dir $(wildcard $(addprefix src/*/*, .cpp)))
-OBJS = main.o Set.o Inheritance.o Matrices.o BooleanMatrix.o 
+OBJS = main.o \
+Set.o \
+Inheritance.o \
+Matrix.o BooleanMatrix.o \
+ProductSet.o Relation.o BinaryRelation.o
+
+.PHONY: clean all run test
 
 VPATH = src:$(strip $(addsuffix :,$(CPPDIR)))
 
-test:
-	@echo $(CPPDIR)
+test: $(TEST) all
+	$(PROGRAM) < $(TESTFILE)
+
+run: all
+	$(PROGRAM)
+
 
 all: $(PROGRAM)
+
 
 $(PROGRAM): $(OBJS)
 	$(LINK) $(addprefix bin/, $(OBJS)) -o $@
@@ -33,8 +50,24 @@ Set.o: Set.cpp Set.hpp
 Inheritance.o: Inheritance.cpp Inheritance.hpp
 	$(COMPILE) src/Inheritance/Inheritance.cpp -o bin/$@
 
-Matrices.o: Matrices.cpp Matrices.hpp
-	$(COMPILE) src/Matrices/Matrices.cpp -o bin/$@
+Matrix.o: Matrix.cpp Matrix.hpp
+	$(COMPILE) src/Matrix/Matrix.cpp -o bin/$@
 
 BooleanMatrix.o: BooleanMatrix.cpp BooleanMatrix.hpp
-	$(COMPILE) src/BooleanMatrix/BooleanMatrix.cpp -o bin/$@
+	$(COMPILE) src/Matrix/BooleanMatrix.cpp -o bin/$@
+
+ProductSet.o: ProductSet.cpp ProductSet.hpp
+	$(COMPILE) src/ProductSet/ProductSet.cpp -o bin/$@
+
+Relation.o: Relation.cpp Relation.hpp
+	$(COMPILE) src/ProductSet/Relation.cpp -o bin/$@
+
+BinaryRelation.o: BinaryRelation.cpp BinaryRelation.hpp
+	$(COMPILE) src/ProductSet/BinaryRelation.cpp -o bin/$@
+
+$(TEST):
+	gcc src/test.c -o $@
+	$(TEST) > $(TESTFILE)
+
+clean:
+	rm $(PROGRAM) $(TEST) $(TESTFILE) $(addprefix bin/, $(OBJS))

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820CEC3D1CC492A100B9D848 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 820CEC3C1CC492A100B9D848 /* makefile */; };
 		8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10B1CB8DDF300B70667 /* Tree.cpp */; };
 		8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10E1CB8EB0100B70667 /* Relation.cpp */; };
 		8236F2771CBB54E9006B7BF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8236F2761CBB54E9006B7BF2 /* README.md */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		820CEC3C1CC492A100B9D848 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = "C++/makefile"; sourceTree = SOURCE_ROOT; };
 		8220D10B1CB8DDF300B70667 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tree.cpp; path = Tree/Tree.cpp; sourceTree = "<group>"; };
 		8220D10C1CB8DDF300B70667 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Tree.hpp; path = Tree/Tree.hpp; sourceTree = "<group>"; };
 		8220D10E1CB8EB0100B70667 /* Relation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Relation.cpp; path = ProductSet/Relation.cpp; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				829B3E6A1CB26857004320AC /* header.h */,
 				8220D10A1CB8DDE500B70667 /* Tree */,
 				829B3E6B1CB26857004320AC /* Inheritance */,
+				820CEC3C1CC492A100B9D848 /* makefile */,
 				829B3E6E1CB26857004320AC /* Logic */,
 				829B3E711CB26857004320AC /* main.cpp */,
 				8236F2791CBB9560006B7BF2 /* Matrix */,
@@ -226,6 +229,7 @@
 			files = (
 				8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */,
 				8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */,
+				820CEC3D1CC492A100B9D848 /* makefile in Sources */,
 				8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */,
 				829B3E7D1CB26857004320AC /* Set.cpp in Sources */,
 				8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */,
