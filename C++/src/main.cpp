@@ -182,10 +182,64 @@ void testProductSet() {
     displayProductSet(test);
 }
 
+void testRelation() {
+    cout << "test relation" << endl;
+    unsigned int r = 1, c = 1;
+    cin >> r >> c;
+
+    BooleanMatrix matrix1(r, c);
+    for (int i = 1; i <= r; i++) {
+        for (int j = 1; j <= c; j++) {
+            bool t = true;
+            int x;
+            cin >> x;
+            t = (x == 1) ? 1 : 0;
+            matrix1.replace(t, i, j);
+        }
+    }
+    cout << "matrix1:" << endl;
+    matrix1.display();
+    cout << endl;
+
+    BooleanMatrix matrix2(r, c);
+    for (int i = 1; i <= r; i++) {
+        for (int j = 1; j <= c; j++) {
+            bool t = true;
+            int x;
+            cin >> x;
+            t = (x == 1) ? 1 : 0;
+            matrix2.replace(t, i, j);
+        }
+    }
+    cout << "matrix2:" << endl;
+    matrix2.display();
+    cout << endl;
+
+    Relation r1(matrix1);
+    r1.getBooleanMatrix().display();
+    cout << endl;
+
+    Relation r2(matrix2);
+    r2.getBooleanMatrix().display();
+    cout << endl;
+    
+    r1.complementary().getBooleanMatrix().display();
+    cout << endl;
+    r1.inverse().getBooleanMatrix().display();
+    cout << endl;
+    
+    (r1 & r2).getBooleanMatrix().display();
+    cout << endl;
+    (r1 | r2).getBooleanMatrix().display();
+    cout << endl;
+
+}
+
 int main() {
     testBooleanMatrix();
     testDigraph();
     testProductSet();
+    testRelation();
 }
 
 //int main() {
