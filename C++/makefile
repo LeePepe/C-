@@ -28,6 +28,8 @@ ProductSet.o Relation.o BinaryRelation.o
 
 VPATH = src:$(strip $(addsuffix :,$(CPPDIR)))
 
+
+
 test: $(TEST) all
 	$(PROGRAM) < $(TESTFILE)
 
@@ -71,3 +73,21 @@ $(TEST):
 
 clean:
 	rm $(PROGRAM) $(TEST) $(TESTFILE) $(addprefix bin/, $(OBJS))
+
+help:  
+	@echo 'Created by 李天培 on 16/4/6.'
+	@echo 'Copyright © 2016年 lee. All rights reserved.'
+	@echo 'email: 1105208297@qq.com'
+	@echo ''
+	@echo 'Usage: make [TARGET]'
+	@echo 'TARGETS:'
+	@echo '  test 		(=make) run with input file $(TESTFILE).'
+	@echo '  run 		run program.'
+	@echo '  all		compile and link.'  
+	@echo '  $(PROGRAM)		link.'
+	@echo '  clean     	clean objects, the executable file, $(TESTFILE).'
+	@echo '  $(TEST)   compile random data file test.c and create random data to $(TESTFILE)'  
+	@echo '  *.o   	compile special .cpp file to .o file.' 
+	@echo '  help      	print this message.'  
+	@echo  	
+	@echo 'Report bugs to my email.'
