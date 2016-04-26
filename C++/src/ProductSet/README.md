@@ -64,8 +64,6 @@ It is complex to program on general relation. So I do that in BinaryRelation.
 
         Input a N. And calculate path. We can use a new Relation(BinaryRelation) to represent it.
 
-        If N == -1, then return **conectivity relation** for R
-
     3. Properties of Relations:
 
         We can identify properties of a relation by its matrix as follows.
@@ -115,3 +113,20 @@ It is complex to program on general relation. So I do that in BinaryRelation.
         
         M(S∘R) = M(R) ⊙ M(S)
 
+    6. Closures
+    
+        we need to find is the smallest relation R1 on A that contains R and possesses the property we desire. If a relation R1 is exist, call it the **closure** of R.
+
+        > Reflexive closure
+
+            R1 = R ∪ △, which △is the diagonal relation.
+
+        > Symmetric closure
+
+            R ∪ R-1 is the symmetric closure of R.
+
+        > Transitive closure and Warshall's Algorithm
+
+            The transitive closure of R is just the **connectivity relation** R∞ 
+
+            

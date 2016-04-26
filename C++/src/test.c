@@ -157,7 +157,6 @@ void testRelation() {
 int main(void) {
     testBooleanMatrix();
     testDigraph();
-    testProductSet();
     testRelation();
     return 0;
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		820CEC3D1CC492A100B9D848 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 820CEC3C1CC492A100B9D848 /* makefile */; };
-		8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10B1CB8DDF300B70667 /* Tree.cpp */; };
 		8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10E1CB8EB0100B70667 /* Relation.cpp */; };
 		8236F2771CBB54E9006B7BF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8236F2761CBB54E9006B7BF2 /* README.md */; };
 		8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8236F27A1CBB9560006B7BF2 /* BooleanMatrix.cpp */; };
@@ -35,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		820CEC3C1CC492A100B9D848 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = "C++/makefile"; sourceTree = SOURCE_ROOT; };
-		8220D10B1CB8DDF300B70667 /* Tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Tree.cpp; path = Tree/Tree.cpp; sourceTree = "<group>"; };
 		8220D10C1CB8DDF300B70667 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Tree.hpp; path = Tree/Tree.hpp; sourceTree = "<group>"; };
 		8220D10E1CB8EB0100B70667 /* Relation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Relation.cpp; path = ProductSet/Relation.cpp; sourceTree = "<group>"; };
 		8220D10F1CB8EB0100B70667 /* Relation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Relation.hpp; path = ProductSet/Relation.hpp; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 		8220D10A1CB8DDE500B70667 /* Tree */ = {
 			isa = PBXGroup;
 			children = (
-				8220D10B1CB8DDF300B70667 /* Tree.cpp */,
 				8220D10C1CB8DDF300B70667 /* Tree.hpp */,
 			);
 			name = Tree;
@@ -227,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8220D10D1CB8DDF300B70667 /* Tree.cpp in Sources */,
 				8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */,
 				820CEC3D1CC492A100B9D848 /* makefile in Sources */,
 				8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */,

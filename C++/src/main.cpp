@@ -150,6 +150,25 @@ void testDigraph() {
     cout << "transitive: " << d.isTransitive() << endl;
     cout << "transitive: " << pathD.isTransitive() << endl;
     
+    cout << "Equivalence: " << d.isEquivalence() << endl;
+    cout << "Equivalence: " << pathD.isEquivalence() << endl;
+    
+    cout << "reflexive closure: " << endl;
+    d.reflexiveClosure().getBooleanMatrix().display();
+    cout << "reflexvie: " << d.reflexiveClosure().isReflexive() << endl;
+    
+    cout << "symmetric closure: " << endl;
+    d.symmetricClosure().getBooleanMatrix().display();
+    cout << "symmetric: " << d.symmetricClosure().isSymmetric() << endl;
+    
+    cout << "transitive closure: " << endl;
+    d.transitiveClosure().getBooleanMatrix().display();
+    cout << "transitive: " << d.transitiveClosure().isTransitive() << endl;
+    
+    cout << "composition: " << endl;
+    d.composition(pathD).getBooleanMatrix().display();
+    
+    
     delete [] test;
 }
 
@@ -238,26 +257,25 @@ void testRelation() {
 int main() {
     testBooleanMatrix();
     testDigraph();
-    testProductSet();
     testRelation();
 }
 
-//int main() {
-//    cout << "\ncreat base A" << endl;
-//    baseA ba;
-//    cout << "\ncreat base B" << endl;
-//    baseB bb;
-//    cout << "\ncreat derived A" << endl;
-//    derivedA da;
-//    cout << "\ncreat derived B" << endl;
-//    derivedB db;
-//    cout << "\ncreat C" << endl;
-//    C c;
-//    cout << "\ndestructor" << endl;
-//
-//    
-//    return 0;
-//}
+void testInheritance() {
+    cout << "test Inheritance" << endl;
+    cout << "\ncreat base A" << endl;
+    baseA ba;
+    cout << "\ncreat base B" << endl;
+    baseB bb;
+    cout << "\ncreat derived A" << endl;
+    derivedA da;
+    cout << "\ncreat derived B" << endl;
+    derivedB db;
+    cout << "\ncreat C" << endl;
+    C c;
+    cout << "\ndestructor" << endl;
+
+    
+}
 
 //int main() {
 //    int row = 1, columns = 1;

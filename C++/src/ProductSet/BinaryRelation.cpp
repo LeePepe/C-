@@ -45,17 +45,8 @@ int BinaryRelation::getSetElePos(int x) {
 
 BinaryRelation BinaryRelation::pathOfLength(int n) {
     BooleanMatrix tempBM = matrix;
-    if (n == -1) {
-        while (true) {
-            if (tempBM == tempBM.BooleanProduct(matrix)) {
-                break;
-            }
-            tempBM = tempBM.BooleanProduct(matrix);
-        }
-    } else {
-        for (int i = 1; i < n; i++) {
-            tempBM = tempBM.BooleanProduct(matrix);
-        }
+    for (int i = 1; i < n; i++) {
+        tempBM = tempBM.BooleanProduct(matrix);
     }
     BinaryRelation temp(tempBM, set);
     return temp;
@@ -139,6 +130,35 @@ bool BinaryRelation::isEquivalence() const {
 
 BinaryRelation BinaryRelation::composition(const BinaryRelation & br) {
     BooleanMatrix m = matrix.BooleanProduct(br.getBooleanMatrix());
-    BinaryRelation temp(m, set);
-    return temp;
+    return BinaryRelation(m, set);
 }
+
+BinaryRelation BinaryRelation::reflexiveClosure() const {
+    int size
+    BooleanMatrix identify(matrix.getRow(), matrix.getColums());
+    for (int i = 1; i <= identify.getRow(); i++) {
+        identify.replace(1, i, i);
+    }
+    return BinaryRelation(identify | matrix, set);
+}
+
+BinaryRelation BinaryRelation::symmetricClosure() const {
+    return BinaryRelation(inverse().getBooleanMatrix() | matrix, set);
+}
+
+BinaryRelation BinaryRelation::transitiveClosure() const {
+    int n = matrix.getRow();
+    BooleanMatrix temp(matrix);
+    for (int k = 1; k <= n; k++) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                temp.replace(temp.getElement(i, j) |
+                             (temp.getElement(i, k) &
+                              temp.getElement(k, j)),
+                             i, j);
+            }
+        }
+    }
+    return BinaryRelation(temp, set);
+}
+

@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include "../Matrix/BooleanMatrix.hpp"
 #include "../Set/Set.hpp"
-#include "ProductSet.hpp"
 #include "Relation.hpp"
 
 class BinaryRelation: public Relation {
@@ -38,6 +37,10 @@ public:
     
     BinaryRelation composition(const BinaryRelation &);
 
+    BinaryRelation reflexiveClosure() const;
+    BinaryRelation symmetricClosure() const;
+    BinaryRelation transitiveClosure() const;
+    
 };
 
 #endif /* Digraph_hpp */
