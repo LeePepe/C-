@@ -134,7 +134,6 @@ BinaryRelation BinaryRelation::composition(const BinaryRelation & br) {
 }
 
 BinaryRelation BinaryRelation::reflexiveClosure() const {
-    int size
     BooleanMatrix identify(matrix.getRow(), matrix.getColums());
     for (int i = 1; i <= identify.getRow(); i++) {
         identify.replace(1, i, i);

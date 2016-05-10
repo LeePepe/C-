@@ -9,14 +9,30 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "C++/src/ProductSet/Digraph.cpp"
-            timestampString = "482066840.752422"
+            filePath = "C++/src/Tree/BinaryTree.cpp"
+            timestampString = "484469309.742217"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "Digraph::pathOfLength(int n)"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "BinaryTree::BinaryTree(std::vector&lt;char&gt; &amp; elements)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "C++/src/main.cpp"
+            timestampString = "484558654.241833"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "testMinimalSpanningTrees()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

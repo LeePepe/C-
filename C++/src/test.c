@@ -154,10 +154,56 @@ void testRelation() {
     printf("\n");
 }
 
+void testTree() {
+    int randomData = open("/dev/urandom", O_RDONLY);
+    
+    unsigned int n;
+    read(randomData, &n, sizeof(n));
+    n = n % 20;
+    printf("%d\n", n);
+    while (n--) {
+        unsigned int b;
+        read(randomData, &b, sizeof(b));
+        b = b % 27 + 97;
+        if (b == 123) {
+            printf("# ");
+        } else {
+            printf("%c ", b);
+        }
+    }
+    printf("\n");
+}
+
+void testBinarySearchTree() {
+    int randomData = open("/dev/urandom", O_RDONLY);
+    
+    unsigned int n;
+    read(randomData, &n, sizeof(n));
+    n = n % 20;
+    printf("%d\n", n);
+    while (n--) {
+        unsigned int b;
+        read(randomData, &b, sizeof(b));
+        b = b % 200;
+        printf("%d ", b);
+    }
+    printf("\n");
+    
+    read(randomData, &n, sizeof(n));
+    n = n % 200;
+    printf("%d\n", n);
+
+    read(randomData, &n, sizeof(n));
+    n = n % 200;
+    printf("%d\n", n);
+    
+    read(randomData, &n, sizeof(n));
+    n = n % 200;
+    printf("%d\n", n);
+}
+
 int main(void) {
-    testBooleanMatrix();
-    testDigraph();
-    testRelation();
+    testBinarySearchTree();
     return 0;
 }
 

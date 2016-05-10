@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8200E6F41CE1ACBC00DD249B /* BinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8200E6F21CE1ACBC00DD249B /* BinarySearchTree.cpp */; };
+		82053F711CE0850F00BBEFBE /* MinimalSpanningTrees.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82053F6F1CE0850F00BBEFBE /* MinimalSpanningTrees.cpp */; };
 		820CEC3D1CC492A100B9D848 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 820CEC3C1CC492A100B9D848 /* makefile */; };
 		8220D1101CB8EB0100B70667 /* Relation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8220D10E1CB8EB0100B70667 /* Relation.cpp */; };
 		8236F2771CBB54E9006B7BF2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8236F2761CBB54E9006B7BF2 /* README.md */; };
 		8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8236F27A1CBB9560006B7BF2 /* BooleanMatrix.cpp */; };
 		8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8236F27C1CBB9560006B7BF2 /* Matrix.cpp */; };
+		8295B2201CD9D96D00EFAE88 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 8295B21F1CD9D96D00EFAE88 /* README.md */; };
+		8295B2251CDA038800EFAE88 /* BinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8295B2241CDA038800EFAE88 /* BinaryTree.cpp */; };
 		829B3E791CB26857004320AC /* Inheritance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E6C1CB26857004320AC /* Inheritance.cpp */; };
 		829B3E7A1CB26857004320AC /* Logic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E6F1CB26857004320AC /* Logic.cpp */; };
 		829B3E7B1CB26857004320AC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 829B3E711CB26857004320AC /* main.cpp */; };
@@ -33,8 +37,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8200E6F21CE1ACBC00DD249B /* BinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinarySearchTree.cpp; path = Tree/BinarySearchTree.cpp; sourceTree = "<group>"; };
+		8200E6F31CE1ACBC00DD249B /* BinarySearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinarySearchTree.hpp; path = Tree/BinarySearchTree.hpp; sourceTree = "<group>"; };
+		82053F6F1CE0850F00BBEFBE /* MinimalSpanningTrees.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MinimalSpanningTrees.cpp; path = Tree/MinimalSpanningTrees.cpp; sourceTree = "<group>"; };
+		82053F701CE0850F00BBEFBE /* MinimalSpanningTrees.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MinimalSpanningTrees.hpp; path = Tree/MinimalSpanningTrees.hpp; sourceTree = "<group>"; };
 		820CEC3C1CC492A100B9D848 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = "C++/makefile"; sourceTree = SOURCE_ROOT; };
-		8220D10C1CB8DDF300B70667 /* Tree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Tree.hpp; path = Tree/Tree.hpp; sourceTree = "<group>"; };
 		8220D10E1CB8EB0100B70667 /* Relation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Relation.cpp; path = ProductSet/Relation.cpp; sourceTree = "<group>"; };
 		8220D10F1CB8EB0100B70667 /* Relation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Relation.hpp; path = ProductSet/Relation.hpp; sourceTree = "<group>"; };
 		8236F2761CBB54E9006B7BF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ProductSet/README.md; sourceTree = "<group>"; };
@@ -43,6 +50,9 @@
 		8236F27C1CBB9560006B7BF2 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
 		8236F27D1CBB9560006B7BF2 /* Matrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Matrix.hpp; sourceTree = "<group>"; };
 		82390C5F1C7EC80800D3637E /* C++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "C++"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8295B21F1CD9D96D00EFAE88 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = Tree/README.md; sourceTree = "<group>"; };
+		8295B2221CD9E3DE00EFAE88 /* BinaryTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = BinaryTree.hpp; path = Tree/BinaryTree.hpp; sourceTree = "<group>"; };
+		8295B2241CDA038800EFAE88 /* BinaryTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryTree.cpp; path = Tree/BinaryTree.cpp; sourceTree = "<group>"; };
 		829B3E6A1CB26857004320AC /* header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = header.h; sourceTree = "<group>"; };
 		829B3E6C1CB26857004320AC /* Inheritance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inheritance.cpp; sourceTree = "<group>"; };
 		829B3E6D1CB26857004320AC /* Inheritance.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Inheritance.hpp; sourceTree = "<group>"; };
@@ -71,7 +81,13 @@
 		8220D10A1CB8DDE500B70667 /* Tree */ = {
 			isa = PBXGroup;
 			children = (
-				8220D10C1CB8DDF300B70667 /* Tree.hpp */,
+				8295B21F1CD9D96D00EFAE88 /* README.md */,
+				8295B2221CD9E3DE00EFAE88 /* BinaryTree.hpp */,
+				8295B2241CDA038800EFAE88 /* BinaryTree.cpp */,
+				8200E6F21CE1ACBC00DD249B /* BinarySearchTree.cpp */,
+				8200E6F31CE1ACBC00DD249B /* BinarySearchTree.hpp */,
+				82053F6F1CE0850F00BBEFBE /* MinimalSpanningTrees.cpp */,
+				82053F701CE0850F00BBEFBE /* MinimalSpanningTrees.hpp */,
 			);
 			name = Tree;
 			sourceTree = "<group>";
@@ -228,13 +244,17 @@
 				820CEC3D1CC492A100B9D848 /* makefile in Sources */,
 				8236F27F1CBB9560006B7BF2 /* Matrix.cpp in Sources */,
 				829B3E7D1CB26857004320AC /* Set.cpp in Sources */,
+				8295B2251CDA038800EFAE88 /* BinaryTree.cpp in Sources */,
 				8236F27E1CBB9560006B7BF2 /* BooleanMatrix.cpp in Sources */,
 				82CB43B61CB6692500977532 /* BinaryRelation.cpp in Sources */,
+				82053F711CE0850F00BBEFBE /* MinimalSpanningTrees.cpp in Sources */,
+				8295B2201CD9D96D00EFAE88 /* README.md in Sources */,
 				829B3E791CB26857004320AC /* Inheritance.cpp in Sources */,
 				82CB43AA1CB541C200977532 /* ProductSet.cpp in Sources */,
 				829B3E7B1CB26857004320AC /* main.cpp in Sources */,
 				829B3E7A1CB26857004320AC /* Logic.cpp in Sources */,
 				8236F2771CBB54E9006B7BF2 /* README.md in Sources */,
+				8200E6F41CE1ACBC00DD249B /* BinarySearchTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

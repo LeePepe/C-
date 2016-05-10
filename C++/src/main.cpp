@@ -40,7 +40,7 @@ void displaySet(int* members, int size) {
 
 void testBooleanMatrix() {
     cout << "TEST BOOLEAN MATRIX" << endl;
-
+    
     int r = 0, c = 0;
     cin >> r >> c;
     BooleanMatrix m1(r, r);
@@ -134,13 +134,13 @@ void testDigraph() {
     
     cout << "reflexvie: " << d.isReflexive() << endl;
     cout << "reflexvie: " << pathD.isReflexive() << endl;
-
+    
     cout << "irreflexvie: " << d.isIrreflexive() << endl;
     cout << "irreflexvie: " << pathD.isIrreflexive() << endl;
-
+    
     cout << "symmetric: " << d.isSymmetric() << endl;
     cout << "symmetric: " << pathD.isSymmetric() << endl;
-
+    
     cout << "Asymmetric: " << d.isAsymmetric() << endl;
     cout << "Asymmetric: " << pathD.isAsymmetric() << endl;
     
@@ -205,7 +205,7 @@ void testRelation() {
     cout << "test relation" << endl;
     unsigned int r = 1, c = 1;
     cin >> r >> c;
-
+    
     BooleanMatrix matrix1(r, c);
     for (int i = 1; i <= r; i++) {
         for (int j = 1; j <= c; j++) {
@@ -219,7 +219,7 @@ void testRelation() {
     cout << "matrix1:" << endl;
     matrix1.display();
     cout << endl;
-
+    
     BooleanMatrix matrix2(r, c);
     for (int i = 1; i <= r; i++) {
         for (int j = 1; j <= c; j++) {
@@ -233,11 +233,11 @@ void testRelation() {
     cout << "matrix2:" << endl;
     matrix2.display();
     cout << endl;
-
+    
     Relation r1(matrix1);
     r1.getBooleanMatrix().display();
     cout << endl;
-
+    
     Relation r2(matrix2);
     r2.getBooleanMatrix().display();
     cout << endl;
@@ -251,14 +251,11 @@ void testRelation() {
     cout << endl;
     (r1 | r2).getBooleanMatrix().display();
     cout << endl;
-
+    
 }
 
-int main() {
-    testBooleanMatrix();
-    testDigraph();
-    testRelation();
-}
+
+
 
 void testInheritance() {
     cout << "test Inheritance" << endl;
@@ -273,18 +270,142 @@ void testInheritance() {
     cout << "\ncreat C" << endl;
     C c;
     cout << "\ndestructor" << endl;
-
+    
     
 }
 
+void print(BinaryTree::Node * temp) {
+    cout << temp->val << " ";
+}
+
+std::vector<char> pre;
+std::vector<char> in;
+
+void getPreOrder(BinaryTree::Node * temp) {
+    pre.push_back(temp->val);
+}
+
+void getInOrder(BinaryTree::Node * temp) {
+    in.push_back(temp->val);
+}
+
+void testTree() {
+    cout << "test Tree" << endl;
+    int n = 1;
+    std::vector<char> tree;
+    cin >> n;
+    while (n--) {
+        char temp = '\0';
+        cin >> temp;
+        tree.push_back(temp);
+    }
+    
+    BinaryTree x = BinaryTree(tree);
+    
+    BinaryTree::preOrder(print, x.getRoot());
+    cout << endl;
+    BinaryTree::inOrder(print, x.getRoot());
+    cout << endl;
+    BinaryTree::postOrder(print, x.getRoot());
+    cout << endl;
+
+    BinaryTree::preOrder(getPreOrder, x.getRoot());
+    BinaryTree::inOrder(getInOrder, x.getRoot());
+    
+    BinaryTree t = BinaryTree(pre, in);
+    BinaryTree::postOrder(print, t.getRoot());
+    cout << endl;
+
+    BinaryTree y = BinaryTree(t);
+
+    BinaryTree::preOrder(print, y.getRoot());
+    cout << endl;
+    BinaryTree::inOrder(print, y.getRoot());
+    cout << endl;
+    BinaryTree::postOrder(print, y.getRoot());
+    
+    BinaryTree::preOrder(getPreOrder, y.getRoot());
+    BinaryTree::inOrder(getInOrder, y.getRoot());
+    
+}
+
+void preorder(BinarySearchTree::Node* node) {
+    if (node == NULL) {
+        return;
+    } else {
+        cout << node->val << " ";
+        preorder(node->left);
+        preorder(node->right);
+    }
+}
+
+void inorder(BinarySearchTree::Node* node) {
+    if (node == NULL) {
+        return;
+    } else {
+        inorder(node->left);
+        cout << node->val << " ";
+        inorder(node->right);
+    }
+}
+
+void displayTree(BinarySearchTree tree) {
+    cout << "pre: ";
+    preorder(tree.getRoot());
+    cout << endl;
+    
+    cout << "in: ";
+    inorder(tree.getRoot());
+    cout << endl;
+}
+
+void testMinimalSpanningTrees() {
+    cout << "testMinimalSpanningTrees" << endl;
+    
+    std::vector<int> elements;
+    
+    int n = 0;
+    cin >> n;
+    while (n--) {
+        int temp = 0;
+        cin >> temp;
+        elements.push_back(temp);
+    }
+    
+    BinarySearchTree tree(elements);
+    displayTree(tree);
+    
+    cin >> n;
+    cout << "insert : " << n << " -> " << tree.insertNode(n) << endl;
+    displayTree(tree);
+    cout << "search : " << n << " -> " << tree.searchNode(n) << endl;
+    cout << "delete : " << n << " -> " << tree.deleteNode(n) << endl;
+    
+    cin >> n;
+    cout << "delete : " << n << " -> " << tree.deleteNode(n) << endl;
+    displayTree(tree);
+
+    
+    cin >> n;
+    cout << "search : " << n << " -> " << tree.searchNode(n) << endl;
+
+    cout << "insert : " << elements[0] << " -> "
+    << tree.insertNode(elements[0]) << endl;
+    displayTree(tree);
+
+}
+
+int main() {
+    testMinimalSpanningTrees();
+}
 //int main() {
 //    int row = 1, columns = 1;
 //    cin >> row >> columns;
-//    
+//
 //    cout << "\ntest constructor" << endl;
 //    Matrix m1(row, columns);
 //    m1.display();
-//    
+//
 //    cout << "\ntest replace" << endl;
 //    for (int i = 1; i <= row; i++) {
 //        for (int j = 1; j <= columns; j++) {
@@ -292,21 +413,21 @@ void testInheritance() {
 //        }
 //    }
 //    m1.display();
-//    
+//
 //    cout << "\ntest copy constructor" << endl;
 //    Matrix m2(m1);
 //    m2.display();
-//    
+//
 //    cout << "\ntest zero matric" << endl;
 //    Matrix m3(columns, row);
-//    
+//
 //    cout << "m3 is zero Matric: " << m3.isZeroMatrix() << endl;
 //    cout << "m1 is zero Matric: " << m1.isZeroMatrix() << endl;
-//    
+//
 //    cout << "\ntest identifyMatrix" << endl;
 //    m3 = Matrix::identifyMatrix(row);
 //    m3.display();
-//    
+//
 //    cout << "\ntest diagonal matric" << endl;
 //    m2 = Matrix(1, 2);
 //    cout << "m2 is diagonal Matric: " << m2.isDiagonalMatrix() << endl;
@@ -314,12 +435,12 @@ void testInheritance() {
 //    cout << "m2 is diagonal Matric: " << m2.isDiagonalMatrix() << endl;
 //    m2.replace(3, 2, 1);
 //    cout << "m2 is diagonal Matric: " << m2.isDiagonalMatrix() << endl;
-//    
+//
 //    cout << "\ntest zero matrix" << endl;
 //    cout << "m2 is zero Matric: " << m2.isZeroMatrix() << endl;
 //    m2 = Matrix(1, 2);
 //    cout << "m2 is zero Matric: " << m2.isZeroMatrix() << endl;
-//    
+//
 //    cout << "\ntest square matrix" << endl;
 //    cout << "m2 is square Matric: " << m2.isSquareMatrix() << endl;
 //    m2 = Matrix(2, 2);
@@ -331,7 +452,7 @@ void testInheritance() {
 //    cout << "m2 is symmetrix Matric: " << m2.isSymmetrix() << endl;
 //    m2.replace(1, 2, 1);
 //    cout << "m2 is symmetrix Matric: " << m2.isSymmetrix() << endl;
-//    
+//
 //    cout << "\ntest *" << endl;
 //    Matrix t1(2, 3);
 //    Matrix t2(3, 2);
@@ -352,7 +473,7 @@ void testInheritance() {
 //    t2.display();
 //    m1 = t1 * t2;
 //    m1.display();
-//    
+//
 //    cout << "\ntest +" << endl;
 //    Matrix t3(2, 3);
 //    t3.replace(2, 1, 1);
@@ -361,19 +482,19 @@ void testInheritance() {
 //    t3.replace(1, 2, 1);
 //    t3.replace(2, 2, 2);
 //    t3.replace(3, 2, 3);
-//    
+//
 //    t1.display();
 //    t3.display();
 //    m1 = t1 + t3;
 //    m1.display();
-//    
+//
 //    cout << "\ntest ==" << endl;
 //    cout << "t1 == t3: " << (t1 == t3) << endl;
-//    
+//
 //    cout << "\ntest transpose" << endl;
 //    m1.display();
 //    m1.transpose().display();
-//    
+//
 //    cout << "\ntest get" << endl;
 //    cout << "m1:"
 //    << "\nrow: " << m1.getRow()

@@ -22,12 +22,12 @@ OBJS = main.o \
 Set.o \
 Inheritance.o \
 Matrix.o BooleanMatrix.o \
-ProductSet.o Relation.o BinaryRelation.o
+ProductSet.o Relation.o BinaryRelation.o \
+BinaryTree.o BinarySearchTree.o
 
 .PHONY: clean all run test
 
 VPATH = src:$(strip $(addsuffix :,$(CPPDIR)))
-
 
 
 test: $(TEST) all
@@ -67,7 +67,13 @@ Relation.o: Relation.cpp Relation.hpp
 BinaryRelation.o: BinaryRelation.cpp BinaryRelation.hpp
 	$(COMPILE) src/ProductSet/BinaryRelation.cpp -o bin/$@
 
-$(TEST):
+BinaryTree.o: BinaryTree.cpp BinaryTree.hpp
+	$(COMPILE) src/Tree/BinaryTree.cpp -o bin/$@
+
+BinarySearchTree.o: BinarySearchTree.cpp BinarySearchTree.hpp
+	$(COMPILE) src/Tree/BinarySearchTree.cpp -o bin/$@
+
+$(TEST): test.c
 	gcc src/test.c -o $@
 	$(TEST) > $(TESTFILE)
 

@@ -17,6 +17,8 @@
 #include "Matrix/Matrix.hpp"
 #include "ProductSet/ProductSet.hpp"
 #include "ProductSet/BinaryRelation.hpp"
+#include "Tree/BinaryTree.hpp"
+#include "Tree/BinarySearchTree.hpp"
 
 #define MAX 100
 #define MIN -100
